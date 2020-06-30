@@ -1,1 +1,29 @@
-print("hello")
+ask_help = [""]
+started = False
+while True:
+    ask_help = input("> ")
+    ask_help = ask_help.lower()
+
+    if ask_help == "start":
+        if started:
+            print("your car has already started")
+        else:
+            print("Your car has started")
+            started = True
+    elif ask_help == "stop":
+        if not started:
+            print("Car has already stopped")
+        else:
+            print("your car has stopped")
+            started = False
+    elif ask_help == "help":
+        print(
+    " start to start the car\n",
+    "stop to stop the car")
+    elif ask_help == "quit":
+        break
+    else:
+        print("sorry I do not understand")
+
+
+
